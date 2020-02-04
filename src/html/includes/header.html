@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
+<% var data = {
+  title: "Заголовок | Проект",
+  author: "Harrix"
+}; %>
+    <%= _.template(require('./../includes/header.html').default)(data) %>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <div class="container">
 
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="stylesheet" href="css/style.bundle.css" />
 
-    <title>
-        <%=title%>
-    </title>
-</head>
+        </div>
 
-<body>
+        <%= _.template(require('./../includes/footer.html').default)(data) %>

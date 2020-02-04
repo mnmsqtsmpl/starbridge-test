@@ -1,0 +1,14 @@
+@import "task-item/task-item.scss";
+@import "__heading.scss";
+.tasks-list {
+    &:after {
+        content: "";
+        display: block;
+        margin-top: 40px;
+        height: 1.5px;
+        width: 100%;
+        background-image: linear-gradient(90deg, #666, #666 40%, transparent 40%, transparent 100%);
+        background-size: 6px;
+        border: none;
+    }
+}

@@ -1,9 +1,63 @@
-<% var data = {
-  title: "Заголовок | Проект",
-  author: "Harrix"
-}; %>
-<%= _.template(require('./../includes/header.html').default)(data) %>
+<!DOCTYPE html>
+<html lang="ru">
 
-<div class="container">Первая страница.</div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<%= _.template(require('./../includes/footer.html').default)(data) %>
+    <link rel="stylesheet" href="css/style.bundle.css" />
+
+    <title>Starbridge test</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+
+            <div class="tasks-list">
+                <h2 class="tasks-list__heading heading">Список</h2>
+                <input class="task-item__checkbox" checked type="checkbox" name="tasks-list" id="task-item__1">
+                <div class="task-item">
+                    <div class="task-item__wrapper wrapper">
+                        <h3 class="task-item__title">Задача</h3>
+                        <p class="task-item__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
+                        <label class="task-item__checkbox-button" for="task-item__1"></label>
+                        <button class="task-item__delete-button"></button>
+                    </div>
+                </div>
+                <input class="task-item__checkbox" type="checkbox" name="tasks-list" id="task-item__2">
+                <div class="task-item">
+                    <div class="task-item__wrapper wrapper">
+                        <h3 class="task-item__title">Задача</h3>
+                        <p class="task-item__text">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые.</p>
+                        <label class="task-item__checkbox-button" for="task-item__2"></label>
+                        <button class="task-item__delete-button"></button>
+                    </div>
+                </div>
+                <input class="task-item__checkbox" type="checkbox" name="tasks-list" id="task-item__3">
+                <div class="task-item">
+                    <div class="task-item__wrapper wrapper">
+                        <h3 class="task-item__title">Задача</h3>
+                        <p class="task-item__text">Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML.</p>
+                        <label class="task-item__checkbox-button" for="task-item__3"></label>
+                        <button class="task-item__delete-button"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-task">
+                <h2 class="new-task__heading heading">Новая</h2>
+                <div class="new-task__wrapper wrapper">
+                    <input type="text" class="new-task__name" id="new-task__name" placeholder="Название задачи">
+                    <textarea class="new-task__text" id="new-task__text" placeholder="Описание задачи" rows="1"></textarea>
+                    <button class="new-task__create-button">Добавить</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="\js\bundle.js"></script>
+
+</html>

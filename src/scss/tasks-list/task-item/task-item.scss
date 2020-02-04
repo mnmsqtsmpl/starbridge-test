@@ -1,0 +1,109 @@
+@import "__wrapper.scss";
+.task-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 7px transparentize($gray, .75));
+    * {
+        transition: .3s;
+    }
+    &__title {
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: bold;
+    }
+    &__text {
+        margin-bottom: 0;
+    }
+    &__checkbox-button {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 55px;
+        height: 55px;
+        border-radius: 15px;
+        background: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0 0 7px 1px transparentize($gray, .85);
+        cursor: pointer;
+        border: 0 solid $green;
+        &:hover {
+            border-width: 3px;
+        }
+    }
+    &__delete-button {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 35px;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 1px solid transparentize($pink, .25);
+        background-color: white;
+        cursor: pointer;
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url(/src/img/trash.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: brightness(1);
+        }
+        &:hover {
+            border-width: 3px;
+        }
+        &:active {
+            background-color: $pink;
+            &:before {
+                filter: brightness(15);
+            }
+        }
+    }
+}
+
+.task-item__checkbox {
+    display: none;
+    &:checked+.task-item {
+        filter: drop-shadow(0 0 7px transparentize($green, .5));
+        .task-item__wrapper {
+            &:before {
+                background: $green;
+            }
+        }
+        .task-item__title {
+            color: $green;
+            font-weight: bold;
+        }
+        .task-item__checkbox-button {
+            background-image: url(/src/img/check.svg), radial-gradient(circle at top left, #1fd37b, #0fb14c);
+            background-color: $green;
+            box-shadow: 0 2px 7px 1px transparentize($green, .5), inset -2px -2px 9px -1px rgba(100, 85, 85, 0.25);
+            &:hover {
+                border-width: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .task-item__checkbox-button {
+        top: 75px;
+        left: 25px;
+        width: 35px;
+        height: 35px;
+    }
+    .task-item__delete-button {
+        top: 70px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
+        &:before {
+            background-size: 20px;
+        }
+    }
+}

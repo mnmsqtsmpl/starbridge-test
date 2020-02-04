@@ -1,4 +1,7 @@
-$red: red;
-body {
-    background: $red;
-}
+@import "colors.scss";
+@import "normalize.scss";
+@import "general.scss";
+@import "common.blocks/heading.scss";
+@import "common.blocks/wrapper.scss";
+@import "tasks-list/tasks-list.scss";
+@import "new-task/new-task.scss";

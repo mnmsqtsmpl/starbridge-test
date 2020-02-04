@@ -1,0 +1,44 @@
+@import '__heading.scss';
+.new-task {
+    padding-top: 40px;
+    filter: drop-shadow(0 0 7px rgba(128, 128, 128, .25));
+    &__wrapper {
+        padding-left: 80px;
+    }
+    &__name {
+        font-size: 1.5rem;
+        padding: 10px 15px 15px 0;
+        font-weight: bold;
+        border: none;
+        border-bottom: 1px solid $lightgray;
+    }
+    &__text {
+        padding: 10px 15px 15px 0;
+        border: none;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        overflow: hidden;
+        resize: none;
+    }
+    &__create-button {
+        display: inline-block;
+        align-self: flex-end;
+        font-weight: bold;
+        color: white;
+        padding: 20px 50px;
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(to bottom right, $green 30%, $blue);
+        cursor: pointer;
+        &:hover {
+            background: linear-gradient(to top left, $green 30%, $blue);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .new-task__create-button {
+        align-self: stretch;
+        margin-top: 15px;
+    }
+}

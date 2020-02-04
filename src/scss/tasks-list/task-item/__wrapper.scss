@@ -1,0 +1,11 @@
+.task-item__wrapper {
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+@media (max-width: 576px) {
+    .task-item__wrapper {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
