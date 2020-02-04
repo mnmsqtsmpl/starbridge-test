@@ -49,7 +49,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            background-image: url(src/img/trash.svg);
+            background-image: url(../img/trash.svg);
             background-repeat: no-repeat;
             background-position: center;
             filter: brightness(1);
@@ -80,7 +80,7 @@
             font-weight: bold;
         }
         .task-item__checkbox-button {
-            background-image: url(src/img/check.svg), radial-gradient(circle at top left, #1fd37b, #0fb14c);
+            background-image: url(../img/check.svg), radial-gradient(circle at top left, #1fd37b, #0fb14c);
             background-color: $green;
             box-shadow: 0 2px 7px 1px transparentize($green, .5), inset -2px -2px 9px -1px rgba(100, 85, 85, 0.25);
             &:hover {
