@@ -30,7 +30,7 @@
         border-radius: 50px;
         background: linear-gradient(to bottom right, $green 30%, $blue);
         cursor: pointer;
-        &:hover {
+        &:active {
             background: linear-gradient(to top left, $green 30%, $blue);
         }
     }
@@ -40,5 +40,13 @@
     .new-task__create-button {
         align-self: stretch;
         margin-top: 15px;
+    }
+}
+
+@media (pointer:fine) {
+    .new-task__create-button {
+        &:hover {
+            background: linear-gradient(to top left, $green 30%, $blue);
+        }
     }
 }

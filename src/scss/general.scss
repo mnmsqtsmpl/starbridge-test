@@ -32,3 +32,21 @@
         padding: 30px 15px;
     }
 }
+
+@media (pointer: coarse) {
+    .task-item__checkbox-button {
+        &:hover,
+        &:active {
+            border-width: 0;
+        }
+    }
+    .task-item__delete-button {
+        &:hover,
+        &:active {
+            border-width: 1px;
+        }
+    }
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
